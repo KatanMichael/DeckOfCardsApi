@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 class RestController
 {
-    @GetMapping(path = ["/"])
-    fun index() : String
+    @GetMapping(path = ["/{id}"])
+    fun index(@PathVariable id: Int = 0) : String
     {
-        return "Hello, World!"
+        return "Hello, World! $id"
     }
 }
