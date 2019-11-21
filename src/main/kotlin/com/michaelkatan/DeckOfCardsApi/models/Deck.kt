@@ -1,4 +1,10 @@
 package com.michaelkatan.DeckOfCardsApi.models
 
-data class Deck(val id: String, val shuffled: Boolean,
-                val remaining: Int)
+class Deck(val numOfDecks: Int = 1, val onlyCards: Array<Card>? = null)
+{
+    init {
+
+    }
+
+
+}
