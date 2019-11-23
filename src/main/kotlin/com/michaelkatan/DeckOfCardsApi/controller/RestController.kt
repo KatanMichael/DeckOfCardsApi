@@ -1,7 +1,7 @@
 package com.michaelkatan.DeckOfCardsApi.controller
 
 import com.google.gson.Gson
-import com.michaelkatan.DeckOfCardsApi.Util.Util
+import com.michaelkatan.DeckOfCardsApi.util.Util
 import com.michaelkatan.DeckOfCardsApi.models.Card
 import com.michaelkatan.DeckOfCardsApi.models.Response
 import com.michaelkatan.DeckOfCardsApi.repository.Repository
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 class RestController
 {
-    val util = Util.getInstance()
+    val util = Util
     val gson = Gson()
     val repository = Repository
 

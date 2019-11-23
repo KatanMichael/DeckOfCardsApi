@@ -1,6 +1,6 @@
 package com.michaelkatan.DeckOfCardsApi.repository
 
-import com.michaelkatan.DeckOfCardsApi.Util.Util
+import com.michaelkatan.DeckOfCardsApi.util.Util
 import com.michaelkatan.DeckOfCardsApi.models.Card
 import com.michaelkatan.DeckOfCardsApi.models.Deck
 import java.util.*
@@ -12,7 +12,7 @@ object Repository
 {
     val allDecks : HashMap<String, Deck> = HashMap()
     val cardsOfDecks : HashMap<String ,Stack<Card>> = HashMap()
-    val util = Util.getInstance()
+    val util = Util
 
 
     fun addNewDeckToRepository(cards: ArrayList<Card>,isSuffeld: Boolean):Deck
