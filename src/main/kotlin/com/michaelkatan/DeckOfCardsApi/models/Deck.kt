@@ -1,10 +1,7 @@
 package com.michaelkatan.DeckOfCardsApi.models
 
-class Deck(val numOfDecks: Int = 1, val onlyCards: Array<Card>? = null)
-{
-    init {
-
-    }
+class Deck(val deckId: String, val isShuffeld: Boolean, var remaningCards: Int,
+           @Transient var numberOfDecks: Int = 1) {
 
 
 }
