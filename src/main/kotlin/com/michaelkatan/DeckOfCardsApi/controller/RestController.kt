@@ -99,10 +99,13 @@ class RestController
     @GetMapping(path = ["/deck/new"])
     fun getBrandNewDeck() : String
     {
+        val newCards = Util.getNewDeck(false, "", 1)
 
-        val newDeck = util.getNewDeck(false, "", 1)
+        val newDeck = repository.addNewDeckToRepository(newCards, false)
 
-        return gson.toJson(newDeck)
+        val response = Response(201,newDeck.deckId,newDeck.isShuffeld,newDeck.remaningCards,null,null)
+
+        return gson.toJson(response)
     }
 
 
